@@ -11,9 +11,9 @@
 
 <ion-content>
   <div class="fullscreen">
-      <ion-searchbar animated autocomplete="off" id="searchcity"></ion-searchbar>
+      <ion-searchbar animated autocomplete="off" id="searchcity" (keyup)="changeList($event)"></ion-searchbar>
       <ion-list>
-          <ion-item *ngFor="let city of list;">{{city}}</ion-item>
+          <ion-item *ngFor="let city of list;" class="show-item item ios in-list ion-focusable hydrated">{{city}}</ion-item>
       </ion-list>
   </div>
 </ion-content>
