@@ -1,0 +1,46 @@
+ion-title{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+ion-content{
+    --ion-background-color: #f9f9ff;
+}
+ion-icon{
+    font-size: 40px;
+}
+#cityblock{
+    background-color: #989aa2;
+}
+#cityblock > ion-col > div{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+#cityblock > ion-col > div > ion-icon{
+    color: #ffffff;
+    font-size: 120px;
+}
+#cityblock > ion-col > div > ion-label{
+    color: #ffffff;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+ion-card{
+    background-color: #ffffff;
+    border-radius: 0px;
+}
+ion-card > ion-row > ion-col{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+ion-card > ion-row:nth-child(1){
+    color: #000000;
+    border-bottom: 0.1px solid #989aa2;
+}
+ion-card > ion-row:nth-child(1) > ion-col > ion-label{
+    font-size: 12px;
+}
+ion-card > ion-row:nth-child(2) > ion-col > ion-badge{
+    float: right;
+}
+ion-card > ion-row:nth-child(2){
+    color: #989aa2;
+}

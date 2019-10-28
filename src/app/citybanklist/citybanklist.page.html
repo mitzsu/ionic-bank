@@ -1,9 +1,28 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>citybanklist</ion-title>
+  <ion-toolbar color="medium">
+    <ion-icon name="arrow-round-back" class="md"></ion-icon>
+    <ion-title>Back Button</ion-title>
   </ion-toolbar>
 </ion-header>
-
 <ion-content>
+  <ion-row id="cityblock" color="medium">
+    <ion-col size="12">
+      <div>
+        <ion-icon name="briefcase"></ion-icon><br>
+        <ion-label>CityName</ion-label>
+      </div>
+    </ion-col>
+  </ion-row>
 
+  <ion-card>
+    <ion-row>
+      <ion-col>Bank: </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-label>Branch: </ion-label>
+        <ion-badge color="medium">88</ion-badge>
+      </ion-col>
+    </ion-row>
+  </ion-card>
 </ion-content>
