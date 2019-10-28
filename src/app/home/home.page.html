@@ -10,6 +10,30 @@
 </ion-header>
 <ion-content>
   <div class="padding">
+
+    <ion-row *ngFor="let city of mainCity;">
+      <ion-col size="6">
+        <ion-card>
+          <ion-card-header>
+            <div class="card-block">
+              <ion-card-title>B</ion-card-title>
+              <ion-card-subtitle>{{city.first}}</ion-card-subtitle>
+            </div>
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+      <ion-col size="6" *ngIf="city.second!=='';">
+        <ion-card>
+          <ion-card-header>
+            <div class="card-block">
+              <ion-card-title>B</ion-card-title>
+              <ion-card-subtitle>{{city.second}}</ion-card-subtitle>
+            </div>
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
     <ion-row>
       <ion-col size="6">
           <ion-card>

@@ -9,17 +9,23 @@ import { CityService } from '../city.service';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
+
+  public mainCity = [];
+  public cityList = [];
+
   constructor(public modalController: ModalController, private cityService: CityService) {}
   
   ngOnInit(){
-    console.log(this.cityService.getMainCities());
+    this.mainCity = this.cityService.getMainCities();
+    this.cityList = this.cityService.getCityList();
   }
 
   async openCityList(isSearch){
     const modal = await this.modalController.create({
       component: CitylistPage,
       componentProps: {
-        'searchbar': isSearch
+        'searchbar': isSearch,
+        'cities': this.cityList
       }
     });
     return await modal.present();

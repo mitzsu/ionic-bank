@@ -9,10 +9,13 @@ import { ModalController, NavParams } from '@ionic/angular';
 export class CitylistPage implements OnInit {
 
   @Input() searchbar: boolean;
+  @Input() cities: Object;
   public showShowSearchBar: string;
+  public list = [];
   
   constructor(public modalController: ModalController, navParams: NavParams) { 
     this.showShowSearchBar = (navParams.get('searchbar'))?"block":"none";
+    this.list = navParams.get('cities');
   }
 
   ngOnInit() {
