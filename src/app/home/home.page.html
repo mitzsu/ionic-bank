@@ -16,7 +16,7 @@
 <ion-header>
   <ion-toolbar class="md" color="medium">
       <ion-title class="md title-md header-title">BANK BAZAAR</ion-title>
-      <ion-buttons slot="primary">
+      <ion-buttons (click)="openCityList(true)" slot="primary">
         <ion-button class="md button button-clear button-has-icon-only ion-activatable ion-focusable">
           <ion-icon slot="icon-only" name="search" role="img" class="md" aria-label="search"></ion-icon>
         </ion-button>
@@ -27,7 +27,7 @@
 </ion-content>
 <!-- fab placed in the center of the content with a list on each side -->
 <ion-fab vertical="bottom" horizontal="end" slot="fixed">
-  <ion-fab-button class="app-citylist" (click)="openCityList()">
+  <ion-fab-button class="app-citylist" (click)="openCityList(false)">
     <ion-icon name="menu"></ion-icon>
   </ion-fab-button>
 </ion-fab>

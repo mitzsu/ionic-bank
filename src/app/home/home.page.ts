@@ -10,9 +10,12 @@ import { CitylistPage } from '../citylist/citylist.page';
 export class HomePage {
   constructor(public modalController: ModalController) {}
   
-  async openCityList(){
+  async openCityList(isSearch){
     const modal = await this.modalController.create({
-      component: CitylistPage
+      component: CitylistPage,
+      componentProps: {
+        'searchbar': isSearch
+      }
     });
     return await modal.present();
   }
