@@ -13,7 +13,7 @@
 
     <ion-row *ngFor="let city of mainCity;">
       <ion-col size="6">
-        <ion-card>
+        <ion-card (click)="showBankList(city.first)">
           <ion-card-header>
             <div class="card-block">
               <ion-card-title>{{city.first | slice:0:1}}</ion-card-title>
@@ -23,7 +23,7 @@
         </ion-card>
       </ion-col>
       <ion-col size="6" *ngIf="city.second!=='';">
-        <ion-card>
+        <ion-card (click)="showBankList(city.second)">
           <ion-card-header>
             <div class="card-block">
               <ion-card-title>{{city.second | slice:0:1}}</ion-card-title>

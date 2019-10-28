@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ModalController, NavParams } from '@ionic/angular';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-citylist',
@@ -13,7 +14,7 @@ export class CitylistPage implements OnInit {
   public showShowSearchBar: string;
   public list = [];
   
-  constructor(public modalController: ModalController, navParams: NavParams) { 
+  constructor(public modalController: ModalController, navParams: NavParams, private router: Router) { 
     this.showShowSearchBar = (navParams.get('searchbar'))?"block":"none";
     this.list = navParams.get('cities');
   }
@@ -42,5 +43,10 @@ export class CitylistPage implements OnInit {
         items[i].setAttribute('class',((shouldShow)?"show-item":"hide-item")+" item ios in-list ion-focusable hydrated");
       }
     }
+  }
+
+  showBankList(url){
+    this.dismiss();
+    this.router.navigate(['/bank/'+url]);
   }
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from "@angular/router";
 
 @Component({
   selector: 'app-citybanklist',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CitybanklistPage implements OnInit {
 
-  constructor() { }
+  public cityName: string;
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
+    this.route.paramMap.subscribe(params => {
+      this.cityName = params.get("city").toUpperCase();
+    });
   }
 
 }

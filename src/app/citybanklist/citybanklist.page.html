@@ -1,7 +1,7 @@
 <ion-header>
   <ion-toolbar color="medium">
-    <ion-icon name="arrow-round-back" class="md"></ion-icon>
-    <ion-title>Back Button</ion-title>
+    <ion-icon name="arrow-round-back" class="md" routerLink="/home"></ion-icon>
+    <ion-title>Bank List</ion-title>
   </ion-toolbar>
 </ion-header>
 <ion-content>
@@ -9,7 +9,7 @@
     <ion-col size="12">
       <div>
         <ion-icon name="briefcase"></ion-icon><br>
-        <ion-label>CityName</ion-label>
+        <ion-label>{{cityName}}</ion-label>
       </div>
     </ion-col>
   </ion-row>

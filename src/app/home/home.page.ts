@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { CitylistPage } from '../citylist/citylist.page';
 import { CityService } from '../city.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -13,7 +14,7 @@ export class HomePage {
   public mainCity = [];
   public cityList = [];
 
-  constructor(public modalController: ModalController, private cityService: CityService) {}
+  constructor(public modalController: ModalController, private cityService: CityService, private router: Router) {}
   
   ngOnInit(){
     this.mainCity = this.cityService.getMainCities();
@@ -29,5 +30,9 @@ export class HomePage {
       }
     });
     return await modal.present();
+  }
+
+  showBankList(url){
+    this.router.navigate(['/bank/'+url]);
   }
 }

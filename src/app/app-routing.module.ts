@@ -6,6 +6,7 @@ const routes: Routes = [
   { path: 'home', loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)},
   { path: 'citylist', loadChildren: './citylist/citylist.module#CitylistPageModule' },
   { path: 'citybanklist', loadChildren: './citybanklist/citybanklist.module#CitybanklistPageModule' },
+  { path: 'bank/:city', loadChildren: './citybanklist/citybanklist.module#CitybanklistPageModule' }
 ];
 
 @NgModule({
