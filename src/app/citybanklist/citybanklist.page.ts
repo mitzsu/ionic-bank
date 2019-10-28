@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from "@angular/router";
 import { HttpClient } from '@angular/common/http';
+import { BankList } from '../citybanklist';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-citybanklist',
@@ -10,12 +12,22 @@ import { HttpClient } from '@angular/common/http';
 export class CitybanklistPage implements OnInit {
 
   public cityName: string;
+  public bankList = [{bank_name: 'loading...', branch: 'loading...', ifsc: 'loading...'}];
+  private _url: string = "https://vast-shore-74260.herokuapp.com/banks?city=";
   constructor(private route: ActivatedRoute, private http: HttpClient) { }
 
   ngOnInit() {
     this.route.paramMap.subscribe(params => {
       this.cityName = params.get("city").toUpperCase();
+      this.showBankList(this._url+this.cityName);
     });
   }
 
+  showBankList(url){
+    this.getBankList(url).subscribe(data => this.bankList = data);
+  }
+
+  getBankList(url): Observable<BankList[]>{
+    return this.http.get<BankList[]>(url);
+  }
 }

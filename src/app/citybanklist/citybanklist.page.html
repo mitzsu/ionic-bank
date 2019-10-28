@@ -14,14 +14,14 @@
     </ion-col>
   </ion-row>
 
-  <ion-card>
+  <ion-card *ngFor="let bank of bankList;">
     <ion-row>
-      <ion-col>Bank: </ion-col>
+      <ion-col>{{bank.bank_name}}</ion-col>
     </ion-row>
     <ion-row>
       <ion-col>
-        <ion-label>Branch: </ion-label>
-        <ion-badge color="medium">88</ion-badge>
+        <ion-label>Branch: {{bank.branch}}</ion-label>
+        <ion-badge color="medium">{{bank.ifsc}}</ion-badge>
       </ion-col>
     </ion-row>
   </ion-card>
