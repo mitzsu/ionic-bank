@@ -9,6 +9,7 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { CitylistPage } from './citylist/citylist.page';
+import { CityService } from './city.service';
 
 @NgModule({
   declarations: [AppComponent, CitylistPage],
@@ -16,6 +17,7 @@ import { CitylistPage } from './citylist/citylist.page';
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
   exports: [ CitylistPage ],
   providers: [
+    CityService,
     StatusBar,
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
