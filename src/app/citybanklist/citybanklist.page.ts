@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from "@angular/router";
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-citybanklist',
@@ -9,7 +10,7 @@ import { ActivatedRoute } from "@angular/router";
 export class CitybanklistPage implements OnInit {
 
   public cityName: string;
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute, private http: HttpClient) { }
 
   ngOnInit() {
     this.route.paramMap.subscribe(params => {
