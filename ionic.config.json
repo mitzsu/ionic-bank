@@ -1,5 +1,7 @@
 {
   "name": "bankbazaar",
-  "integrations": {},
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "angular"
 }

@@ -33,13 +33,19 @@ ion-card > ion-row > ion-col{
 }
 ion-card > ion-row:nth-child(1){
     color: #000000;
-    border-bottom: 0.1px solid #989aa2;
+    font-size: 20px;
+    padding-top: 10px;
 }
 ion-card > ion-row:nth-child(1) > ion-col > ion-label{
-    font-size: 12px;
+    font-size: 15px;
+}
+ion-card > ion-row:nth-child(2) > ion-col > ion-label{
+    font-style: italic;
+    font-weight: bolder;
 }
 ion-card > ion-row:nth-child(2) > ion-col > ion-badge{
-    float: right;
+    margin-top: 8px;
+    margin-bottom: 10px;
 }
 ion-card > ion-row:nth-child(2){
     color: #989aa2;

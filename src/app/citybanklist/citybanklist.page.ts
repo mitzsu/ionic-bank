@@ -24,7 +24,12 @@ export class CitybanklistPage implements OnInit {
   }
 
   showBankList(url){
-    this.getBankList(url).subscribe(data => this.bankList = data);
+    this.getBankList(url).subscribe((data) => {
+      if(data.length>0)
+        this.bankList = data;
+      else
+         this.bankList = [{bank_name: "No data is received", branch: "", ifsc: ""}]
+    });
   }
 
   getBankList(url): Observable<BankList[]>{
